@@ -1,0 +1,24 @@
+<table class="table mt-5">
+  <thead>
+    <tr class="text-center">
+      <th scope="col">Title</th>
+      <th scope="col">Wordcount</th>
+      <th scope="col">Snippet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let list of lists">
+      <td>
+        <a
+          [href]="'https://en.wikipedia.org/?curid=' + list.pageid"
+          target="_blank"
+          >{{ list.title }}</a
+        >
+      </td>
+      <td>
+        {{ list.wordcount }}
+      </td>
+      <td [innerHTML]="list.snippet"></td>
+    </tr>
+  </tbody>
+</table>
