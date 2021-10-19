@@ -16,7 +16,7 @@ export class AppComponent {
 
   // get this term from a child
   getTerm(term: string) {
-    this.wikipedia.search(term).subscribe(({query: {search}}) => {
+    this.wikipedia.search(term).subscribe((search) => {
       this.lists = search;
     });
   }
